@@ -19,4 +19,4 @@ Create a tic tac toe game
 
 Update the README file to include detailed instructions for running the project and a complete list of the tools used.
 
-**Deadline: Thursday, January 9th.**
+**Deadline: Thursday, January 9th 2024.**
