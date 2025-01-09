@@ -9,12 +9,12 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background-color: #F5F7FA; /* Light background with a touch of blue */
+    background-color: #F5F7FA; 
 }
 
 header {
-    background-color: #1D3557; /* Dark blue */
-    color: #F1FAEE; /* Light off-white text */
+    background-color: #1D3557; 
+    color: #F1FAEE; 
     text-align: center;
     padding: 20px 0;
     box-sizing: border-box; 
@@ -33,7 +33,7 @@ footer {
 .container {
     display: flex;
     height: calc(100% - 80px);
-    background-color: #E9EFF1; /* Soft off-white with a hint of light blue */
+    background-color: #E9EFF1; 
 }
 
 .sidebar {
@@ -44,7 +44,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-right: 2px solid #A8DADC; /* Light grayish blue */
+    border-right: 2px solid #A8DADC; 
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -52,7 +52,7 @@ footer {
     text-align: center;
     margin-bottom: 30px;
     font-size: 28px;
-    color: #457B9D; /* Soft blue */
+    color: #457B9D;
     font-weight: 600;
 }
 
@@ -63,7 +63,7 @@ footer {
 label {
     display: block;
     font-size: 16px;
-    color: #4E4E4E; /* Dark gray */
+    color: #4E4E4E;
     margin-bottom: 5px;
 }
 
@@ -71,7 +71,7 @@ input[type="text"], button {
     width: 100%;
     padding: 12px;
     font-size: 16px;
-    border: 2px solid #A8DADC; /* Soft blue border */
+    border: 2px solid #A8DADC;
     border-radius: 8px;
     margin-bottom: 10px;
     box-sizing: border-box;
@@ -79,12 +79,12 @@ input[type="text"], button {
 }
 
 input[type="text"]:focus {
-    border-color: #3B9ACD; /* Slightly darker blue */
+    border-color: #3B9ACD; 
     outline: none;
 }
 
 button {
-    background-color: #2A9D8F; /* Vibrant teal */
+    background-color: #2A9D8F;
     color: white;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -92,7 +92,7 @@ button {
 }
 
 button:hover {
-    background-color: #264653; /* Darker teal */
+    background-color: #264653;
     transform: translateY(-2px);
 }
 
@@ -119,8 +119,8 @@ button:hover {
 .cell {
     width: 100px;
     height: 100px;
-    background-color: #F1FAEE; /* Light cream background */
-    border: 2px solid #A8DADC; /* Light blue border */
+    background-color: #F1FAEE;
+    border: 2px solid #A8DADC; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -131,7 +131,7 @@ button:hover {
 }
 
 .cell:hover {
-    background-color: #BEE9E8; /* Lighter teal on hover */
+    background-color: #BEE9E8;
 }
 
 #game-info {
@@ -144,7 +144,7 @@ button:hover {
 #reset-button {
     margin-top: 20px;
     padding: 12px 20px;
-    background-color: #E9C46A; /* Warm yellow */
+    background-color: #E9C46A;
     color: white;
     border: none;
     cursor: pointer;
@@ -154,7 +154,7 @@ button:hover {
 }
 
 #reset-button:hover {
-    background-color: #F4A261; /* Orange-y yellow */
+    background-color: #F4A261;
 }
 
 #players-info {
@@ -196,29 +196,29 @@ button:hover {
 }
 
 #player1-points {
-    color: #2A9D8F; /* Player 1 points color */
+    color: #2A9D8F; 
 }
 
 #player2-points {
-    color: #F1FAEE; /* Player 2 points color */
+    color: #F1FAEE;
 }
 
 #players-info p span {
     font-size: 20px;
     font-weight: 600;
-    color: #1D3557; /* Dark blue */
+    color: #1D3557; 
     padding: 6px 12px;
     border-radius: 4px;
-    background-color: #F1FAEE; /* Light gray background */
+    background-color: #F1FAEE; 
 }
 
 #players-info p span#player1-points {
-    background-color: #BEE9E8; /* Soft teal background */
+    background-color: #BEE9E8; 
     color: #2A9D8F;
 }
 
 #players-info p span#player2-points {
-    background-color: #F4A261; /* Soft orange background */
+    background-color: #F4A261; 
     color: #F1FAEE;
 }
 

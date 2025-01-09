@@ -1,12 +1,10 @@
-// gameModel.js
-
 const gameModel = {
     player1: '',
     player2: '',
-    currentPlayer: 'X', // 'X' is always the first player (Player 1)
+    currentPlayer: 'X', 
     player1Points: 0,
     player2Points: 0,
-    board: ['', '', '', '', '', '', '', '', ''], // The board is empty at the start
+    board: ['', '', '', '', '', '', '', '', ''], 
 
     // Switch player turn
     switchPlayer() {
