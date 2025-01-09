@@ -48,3 +48,10 @@ A simple **Tic-Tac-Toe** game built using the **MVC (Model-View-Controller)** de
    ```bash
    git clone https://github.com/Bootcamp-FS07/manuel-monroy-practice-3.git
 
+## Live Demo
+
+You can play the game live by visiting the following link:
+
+### [Live Demo on GitHub Pages](https://bootcamp-fs07.github.io/manuel-monroy-practice-3/)
+
+Simply click the link above to start playing Tic-Tac-Toe directly in your browser!
