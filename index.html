@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,53 +15,55 @@
 
     <div class="container">
         
+        <!-- Sidebar for player settings -->
         <div class="sidebar">
-            <h2>Configurar Jugadores</h2>
+            
             <form id="players-form">
                 <div class="form-group">
-                    <label for="player1">Jugador 1:</label>
-                    <input type="text" id="player1" placeholder="Nombre del Jugador 1" required>
+                    <label for="player1" aria-label="Enter Player 1's name">Player 1:</label>
+                    <input type="text" id="player1" placeholder="Player 1's name" required aria-required="true">
                 </div>
                 <div class="form-group">
-                    <label for="player2">Jugador 2:</label>
-                    <input type="text" id="player2" placeholder="Nombre del Jugador 2" required>
+                    <label for="player2" aria-label="Enter Player 2's name">Player 2:</label>
+                    <input type="text" id="player2" placeholder="Player 2's name" required aria-required="true">
                 </div>
-                <button type="submit" id="start-game">Jugar</button>
+                <button type="submit" id="start-game">Play</button>
             </form>
 
-           
+            <!-- Display player names and points -->
             <div id="players-info" style="display: none;">
                 <p id="player1-name"></p>
                 <p id="player2-name"></p>
-                <p>Puntos: <span id="player1-points">0</span> - <span id="player2-points">0</span></p>
+                <p>Points: <span id="player1-points">0</span> - <span id="player2-points">0</span></p>
             </div>
 
-            
-            <button id="reset-button">Reiniciar Juego</button>
+            <!-- Reset Button -->
+            <button id="reset-button">Restart Game</button>
         </div>
 
+        <!-- Main game container -->
         <main class="game-container">
-            <div id="game-board">
-                <div class="row">
-                    <div class="cell" id="cell-0"></div>
-                    <div class="cell" id="cell-1"></div>
-                    <div class="cell" id="cell-2"></div>
+            <div id="game-board" role="grid">
+                <div class="row" role="row">
+                    <div class="cell" id="cell-0" role="gridcell"></div>
+                    <div class="cell" id="cell-1" role="gridcell"></div>
+                    <div class="cell" id="cell-2" role="gridcell"></div>
                 </div>
-                <div class="row">
-                    <div class="cell" id="cell-3"></div>
-                    <div class="cell" id="cell-4"></div>
-                    <div class="cell" id="cell-5"></div>
+                <div class="row" role="row">
+                    <div class="cell" id="cell-3" role="gridcell"></div>
+                    <div class="cell" id="cell-4" role="gridcell"></div>
+                    <div class="cell" id="cell-5" role="gridcell"></div>
                 </div>
-                <div class="row">
-                    <div class="cell" id="cell-6"></div>
-                    <div class="cell" id="cell-7"></div>
-                    <div class="cell" id="cell-8"></div>
+                <div class="row" role="row">
+                    <div class="cell" id="cell-6" role="gridcell"></div>
+                    <div class="cell" id="cell-7" role="gridcell"></div>
+                    <div class="cell" id="cell-8" role="gridcell"></div>
                 </div>
             </div>
 
             <!-- Game Information -->
             <div id="game-info">
-                <p>Jugador: <span id="current-player">X</span></p>
+                <p><span id="current-player"></span></p>
             </div>
         </main>
     </div>
@@ -71,6 +73,9 @@
         <p>&copy; 2025 Tic-Tac-Toe Game.</p>
     </footer>
 
-    <script src="js/script.js"></script>
+    <!-- JavaScript Files -->
+    <script src="js/model/gameModel.js"></script>
+    <script src="js/view/gameView.js"></script> 
+    <script src="js/controller/gameController.js"></script>
 </body>
 </html>

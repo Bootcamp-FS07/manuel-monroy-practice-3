@@ -1,7 +1,7 @@
-// Initialize game variables for players and game state
+
 let player1 = '';
 let player2 = '';
-let currentPlayer = 'X';  // Player 'X' starts the game
+let currentPlayer = 'X';
 let player1Points = 0;
 let player2Points = 0;
 
@@ -26,13 +26,11 @@ document.getElementById('players-form').addEventListener('submit', function (eve
 
     // Check if both players have entered names
     if (player1 && player2) {
-        // Display player names and initial points
         player1NameDisplay.textContent = `Player 1: ${player1}`;
         player2NameDisplay.textContent = `Player 2: ${player2}`;
         player1PointsDisplay.textContent = player1Points;
         player2PointsDisplay.textContent = player2Points;
 
-        // Show the game area and hide the "start" button
         document.getElementById('players-info').style.display = 'block';
         startGameButton.disabled = true;
 
@@ -65,7 +63,7 @@ cells.forEach(cell => {
         // Check for a winner or a tie
         if (checkWinner()) {
             setTimeout(() => {
-                // Increase points for the winner and reset the game
+
                 if (currentPlayer === 'X') {
                     player1Points++;
                     alert(`${player1} has won!`);
@@ -82,7 +80,6 @@ cells.forEach(cell => {
                 resetGame();
             }, 200); 
         } else {
-            // Switch to the other player
             currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
             updateCurrentPlayer();
         }
@@ -90,20 +87,22 @@ cells.forEach(cell => {
 });
 
 // Reset the game when the reset button is clicked
-resetButton.addEventListener('click', resetGame);
+resetButton.addEventListener('click', resetPage);
 
+// Clear all the cells and reset the game state
 function resetGame() {
-    // Clear all the cells and reset the game state
+    
     cells.forEach(cell => {
         cell.textContent = ''; 
     });
     currentPlayer = 'X'; 
     updateCurrentPlayer(); 
-    startGameButton.disabled = false; 
-    gameBoard.style.pointerEvents = 'none'; 
+    startGameButton.disabled = true; 
+ 
+    gameBoard.style.pointerEvents = 'auto'; 
 }
 
-// Check if the game board is full (i.e., no empty cells left)
+// Check if the game board is full 
 function isBoardFull() {
     return [...cells].every(cell => cell.textContent !== ''); 
 }
@@ -111,9 +110,14 @@ function isBoardFull() {
 // Check for a winning combination
 function checkWinner() {
     const winningCombinations = [
-        [0, 1, 2], [3, 4, 5], [6, 7, 8],  
-        [0, 3, 6], [1, 4, 7], [2, 5, 8],  
-        [0, 4, 8], [2, 4, 6]               
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],  
+        [0, 3, 6], 
+        [1, 4, 7],
+        [2, 5, 8],  
+        [0, 4, 8],
+        [2, 4, 6]               
     ];
 
     return winningCombinations.some(combination => {
@@ -126,4 +130,33 @@ function checkWinner() {
 function updatePoints() {
     player1PointsDisplay.textContent = player1Points;
     player2PointsDisplay.textContent = player2Points;
+}
+
+function resetPage() {
+    cells.forEach(cell => {
+        cell.textContent = ''; 
+    });
+
+    currentPlayer = ''; 
+    updateCurrentPlayer(); 
+
+    player1NameDisplay.textContent = '';
+    player2NameDisplay.textContent = '';
+    player1PointsDisplay.textContent = '0';
+    player2PointsDisplay.textContent = '0';
+
+    // Reset player points
+    player1Points = 0;
+    player2Points = 0;
+    currentPlayerDisplay.textContent = ""
+
+
+    gameBoard.style.pointerEvents = 'none';
+
+    startGameButton.disabled = false;
+    document.getElementById('players-info').style.display = 'none';
+
+    // Clear the input fields in the form for a new game
+    document.getElementById('player1').value = '';
+    document.getElementById('player2').value = '';
 }
